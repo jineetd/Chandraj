@@ -1,0 +1,24 @@
+{
+  "name": "chandraj",
+  "version": "1.0.0",
+  "description": "Billing app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jineetd/Chandraj.git"
+  },
+  "author": "jineetd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jineetd/Chandraj/issues"
+  },
+  "homepage": "https://github.com/jineetd/Chandraj#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
