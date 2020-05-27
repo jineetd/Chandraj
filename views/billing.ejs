@@ -2,6 +2,7 @@
   <head>
     <title> Chandraj Billing </title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/assets/list.js"></script>
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -13,11 +14,21 @@
         <input type="number" name="quantity" placeholder="0" required/>
         <button type="submit"> Add item </button>
       </form>
-      <ul>
-        <li> Item 1</li>
-        <li> Item 2</li>
-        <li> Item 3</li>
-      </ul>
+    </div><hr>
+    <div id="todo-table">
+      <table class="hoverTable">
+        <tr>
+          <th> ITEM </th>
+          <th> RATE </th>
+          <th> QUANTITY </th>
+          <th> TOTAL </th>
+        </tr>
+
+
+        <% for( var i=0;i < bill.length; i++ ){ %>
+          <tr><td><%= bill[i].item %></td> <td><%= bill[i].rate %></td><td> <%= bill[i].quantity %> </td><td> <%= bill[i].rate * bill[i].quantity %></td></tr>
+        <% } %>
+      </table>
 
     </div>
 </html>
