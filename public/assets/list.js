@@ -24,16 +24,33 @@ $(document).ready(function(){
 
   });
 
-  $('li').on('click', function(){
+  /*$('table').on('click',function(){
+
       var item = $(this).text().replace(/ /g, "-");
+      console.log(item);
       $.ajax({
         type: 'DELETE',
-        url: '/todo/' + item,
+        url: '/billing/' + item,
         success: function(data){
           //do something with the data via front-end framework
           location.reload();
         }
       });
-  });
+  });*/
+  //var table = $('#user');
+    $('#user tbody').on('click', 'tr', function () {
+        var arr=$(this).closest("tr").get(0).innerText.split('\t');
+        var item=arr[0];
+        var rate=arr[1];
+        console.log(item);
+        $.ajax({
+          type: 'DELETE',
+          url: '/billing/' + item,
+          success: function(data){
+            //do something with the data via front-end framework
+            location.reload();
+          }
+        });
+    });
 
 });

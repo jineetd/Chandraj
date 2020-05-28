@@ -16,7 +16,7 @@
       </form>
     </div><hr>
     <div id="todo-table">
-      <table class="hoverTable">
+      <table class="hoverTable" id="user">
         <tr>
           <th> ITEM </th>
           <th> RATE </th>
@@ -24,10 +24,11 @@
           <th> TOTAL </th>
         </tr>
 
-
+        <tbody>
         <% for( var i=0;i < bill.length; i++ ){ %>
-          <tr><td><%= bill[i].item %></td> <td><%= bill[i].rate %></td><td> <%= bill[i].quantity %> </td><td> <%= bill[i].rate * bill[i].quantity %></td></tr>
+          <tr class="rm"><td><%= bill[i].item %></td> <td><%= bill[i].rate %></td><td> <%= bill[i].quantity %> </td><td> <%= bill[i].rate * bill[i].quantity %></td></tr>
         <% } %>
+        </tbody>
       </table>
 
     </div>

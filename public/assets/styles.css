@@ -87,15 +87,20 @@ h1 { color: #7c795d;
   	.hoverTable{
 		width:100%;
 		border-collapse:collapse;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 20px;
 	}
 	.hoverTable td{
 		padding:7px; border:#4e95f4 1px solid;
 	}
 	/* Define the default color for all the table rows */
 	.hoverTable tr{
+    cursor: pointer;
 		background: #23282e;
 	}
 	/* Define the hover highlight color for the table row */
     .hoverTable tr:hover {
+          text-decoration: line-through;
           background-color: rgba(0,0,0,0.2);
     }

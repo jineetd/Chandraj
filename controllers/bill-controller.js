@@ -15,8 +15,18 @@ module.exports= function(app){
     res.json(data);
   });
 
-  app.delete('/billing',function(req,res){
-
+  app.delete('/billing/:item',function(req,res){
+    var toDelete=req.params.item;
+    console.log(data);
+    for(var i=0;i<data.length;i++)
+    {
+      if(data[i].item==toDelete)
+      {
+        data.splice(i,1);
+        break;
+      }
+    }
+    res.json(data); 
   });
 
 };
