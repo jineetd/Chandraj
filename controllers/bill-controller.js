@@ -8,6 +8,10 @@ module.exports= function(app){
     res.render('billing',{bill:data});
   });
 
+  app.get('/',function(req,res){
+    res.render('home');
+  });
+
   app.post('/billing',urlencodedParser,function(req,res){
     data.push(req.body);
     console.log(data);
@@ -26,7 +30,7 @@ module.exports= function(app){
         break;
       }
     }
-    res.json(data); 
+    res.json(data);
   });
 
 };
