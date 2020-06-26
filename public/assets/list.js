@@ -42,7 +42,7 @@ $(document).ready(function(){
         var arr=$(this).closest("tr").get(0).innerText.split('\t');
         var item=arr[0];
         var rate=arr[1];
-        console.log(item);
+        //console.log(item);
         $.ajax({
           type: 'DELETE',
           url: '/billing/' + item,
