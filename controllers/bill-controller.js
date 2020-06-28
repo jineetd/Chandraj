@@ -1,6 +1,7 @@
 var bodyParser=require('body-parser');
 
-var data=[{item:'Pen', rate:10 ,quantity:2},{item:'Notebook', rate:50, quantity:1},{item:'Photocopy' ,rate:1.5, quantity:100}];
+//var data=[{item:'Pen', rate:10 ,quantity:2},{item:'Notebook', rate:50, quantity:1},{item:'Photocopy' ,rate:1.5, quantity:100}];
+var data=[]
 var urlencodedParser=bodyParser.urlencoded({extended:false});
 
 let {PythonShell} = require('python-shell');
