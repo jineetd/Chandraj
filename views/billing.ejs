@@ -2,10 +2,16 @@
   <head>
     <title> Chandraj Billing </title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/assets/list.js"></script>
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   </head>
   <body>
-    <h1> Billing </h1>
+    <div class="topnav">
+      <a href="/">HOME</a>
+      <a href="/billing">BILLING</a>
+      <a href="/about">ABOUT</a>
+    </div>
     <div id="todo-table">
       <form>
         <input type="text" name="item" placeholder="New item...." required/>
@@ -13,11 +19,32 @@
         <input type="number" name="quantity" placeholder="0" required/>
         <button type="submit"> Add item </button>
       </form>
-      <ul>
-        <li> Item 1</li>
-        <li> Item 2</li>
-        <li> Item 3</li>
-      </ul>
+    </div><hr>
+    <div id="todo-table">
+      <table class="hoverTable" id="user">
+        <tr>
+          <th> ITEM </th>
+          <th> RATE </th>
+          <th> QUANTITY </th>
+          <th> TOTAL </th>
+        </tr>
 
+        <tbody>
+        <% for( var i=0;i < bill.length; i++ ){ %>
+          <tr class="rm"><td><%= bill[i].item %></td> <td><%= bill[i].rate %></td><td> <%= bill[i].quantity %> </td><td> <%= bill[i].rate * bill[i].quantity %></td></tr>
+        <% } %>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="social">
+      <a href="./try"><button>GET BILL</button></a>
+    </div>
+    <br><br><br>
+    <hr>
+    <div class="social">
+      <a href="https://www.facebook.com/hemal.desai.773" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
     </div>
 </html>

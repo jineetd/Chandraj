@@ -66,6 +66,7 @@ li{
     font-size: 20px;
     cursor: pointer;
     letter-spacing: 1px;
+    tab-size: 4;
 }
 
 li:hover{
@@ -75,3 +76,98 @@ li:hover{
 
 h1 { color: #7c795d;
     font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;text-align: center;}
+.tab{
+  tab-size: 4;
+}
+
+
+
+
+.hoverTable{
+	width:100%;
+	border-collapse:collapse;
+  box-sizing: border-box;
+  font-family: arial;
+  font-size: 20px;
+}
+.hoverTable td{
+	padding:7px; border:#4e95f4 1px solid;
+}
+/* Define the default color for all the table rows */
+.hoverTable tr{
+  cursor: pointer;
+	background: #23282e;
+}
+/* Define the hover highlight color for the table row */
+.hoverTable tr:hover {
+  text-decoration: line-through;
+  background-color: rgba(0,0,0,0.2);
+}
+
+/*css for navigation*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+/*form submit button*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.social{
+  text-align: center;
+  align-content: center;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+p{
+  font-family: 'Trocchi', serif; font-size: 25px; font-weight: normal; line-height: 48px; margin: 0;text-align: center;
+}
