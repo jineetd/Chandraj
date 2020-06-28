@@ -16,6 +16,9 @@ $(document).ready(function(){
         data: todo,
         success: function(data){
           //do something with the data via front-end framework
+          $('form input[name=item]').val('');
+          $('form input[name=rate]').val('');
+          $('form input[name=quantity]').val('');
           location.reload();
         }
       });
