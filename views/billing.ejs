@@ -3,6 +3,14 @@
     <title> Chandraj Billing </title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="/assets/list.js"></script>
+    <script>
+    function myFunction() {
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      location.reload();
+    }
+    </script>
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   </head>
@@ -38,8 +46,9 @@
 
     </div>
     <div class="social">
-      <a href="./try"><button>GET BILL</button></a>
+      <a href="./try"><button onclick="myFunction()"> <%= bill=[] %>GET BILL</button></a>
     </div>
+    <div id="snackbar">Bill generated successfully...</div>
     <br><br><br>
     <hr>
     <div class="social">
