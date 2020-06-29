@@ -19,6 +19,7 @@ for y in test:
     df.loc[ind]= [y["item"]] + [y["rate"]] + [y["quantity"]] + [(int(y["rate"]) * int(y["quantity"]))]
     ind=ind+1
     tot+=(int(y["rate"]) * int(y["quantity"]))
+df.loc[ind]= ["TOTAL"] + ["=>"] + ["=>"] + ["$"+str(tot)]
 html=df.to_html()
 
 text_file=open("./bill-pdf/{0}_{1}_bill.html".format(tot,now.month),"w")
@@ -28,6 +29,6 @@ for line in fp:
 fp.close()
 text_file.write(html)
 text_file.write("</p></div>")
-text_file.write("<div text-align=\"right\" class=\"w3-container w3-content w3-center\" style=\"font-size:30px\" id=\"band\"><p class=\"w3-justify\"><b>TOTAL : {0}</b></p></div>".format(tot))
-text_file.write("<div text-align=\"right\" style=\"font-size:30px\"><p class=\"w3-justify\">________________<br> SIGN<hr></p></div> ")
+#text_file.write("<div text-align=\"right\" class=\"w3-container w3-content w3-center\" style=\"font-size:30px\" id=\"band\"><p class=\"w3-right-align\"><b>TOTAL : {0}</b></p></div>".format(tot))
+text_file.write("<div text-align=\"right\" style=\"font-size:30px\"><p class=\"w3-right-align\">________________<br> SIGN &nbsp;&nbsp;&nbsp;<hr></p></div> ")
 text_file.close()
