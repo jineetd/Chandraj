@@ -13,5 +13,5 @@ app.use(express.static('./public'));
 //fire controllers
 billController(app);
 //listen to port
-app.listen(3000);
+app.listen(8080,'192.168.0.104');
 console.log("Application started at localhost:3000!!!");
