@@ -7,8 +7,8 @@ var urlencodedParser=bodyParser.urlencoded({extended:false});
 let {PythonShell} = require('python-shell');
 
 var options={
-  //scriptPath:"C:/Users/HP PC/Documents/Chandraj/controllers/",
-  scriptPath:"./",
+  scriptPath:"C:/Users/HP PC/Documents/Chandraj/controllers/",
+  //scriptPath:"./",
   args: [JSON.stringify(data)]
 };
 module.exports= function(app){
