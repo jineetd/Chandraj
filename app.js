@@ -13,6 +13,6 @@ app.use(express.static('./public'));
 //fire controllers
 billController(app);
 //listen to port
-var PORT= process.env.PORT || 3000;
+var PORT= process.env.PORT || 5000;
 app.listen(PORT);
 console.log("Application started at localhost:3000!!!");
